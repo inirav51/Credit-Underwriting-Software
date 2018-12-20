@@ -9,7 +9,8 @@ import UpdateForm from "./forms/UpdateForm";
 import ExportForm from "./forms/ExportXlxs";
 import Financials from './forms/Financials'
 import FormNew from "./forms/FormNew";
-import Footer from './Footer'
+import Footer from './Footer';
+import UpdateFinancials from '../components/forms/UpdateFinancials'
 const Ratios = () =><h2>Ratios</h2>
 const Summary = () =><h2>Summary</h2>
 
@@ -29,6 +30,8 @@ class App extends Component{
                         <Route path="/form/new" component={FormNew}/>
                         <Route path ="/form/update" component={UpdateForm} />
                         <Route path ="/form/export" component={ExportForm} />
+                        <Route path ="/update/financial" component={UpdateFinancials} />
+
                         <Footer/>
                     </div>
                 </BrowserRouter>
