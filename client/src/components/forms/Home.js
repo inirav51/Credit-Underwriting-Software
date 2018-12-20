@@ -1,12 +1,20 @@
+// Application Home Screen with 3 button Create New Form, Update Form and Export as Spreedsheet
+
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
 import InfoPage from "../InfoPage";
 import {Redirect} from 'react-router-dom';
+import {fetchFinalcialsList} from '../../actions/index'
+
+
 
 class Home extends Component{
-
+    componentDidMount(){
+        this.props.fetchFinalcialsList();
+    }
     render(){
+        console.log(this.props  )
         return(
             <div className="button-wrap">
                 <div className="row">
@@ -26,6 +34,13 @@ class Home extends Component{
 }
 
 function mapStatetoProps(state){
-    return {auth:state.auth}
+    return {
+        auth:state.auth
+    }
 }
-export default connect(mapStatetoProps)(Home);
+
+const mapDispatchToProps = {
+    fetchFinalcialsList
+}
+
+export default connect(mapStatetoProps, mapDispatchToProps)(Home);
