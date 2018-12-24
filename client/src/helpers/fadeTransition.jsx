@@ -1,3 +1,4 @@
+//This page is currently not used. It can be used if the client decides to use a local user registration and does not want to use google login
 import React from "react";
 
 import Transition from "react-transition-group/Transition";
