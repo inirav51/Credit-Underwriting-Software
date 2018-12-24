@@ -1,3 +1,6 @@
+//This file was needed to setup proxy for inter domain requests and responses. CORS policy rejects unauthorized data transfers between
+//two different ports or URL domains.
+
 const proxy = require('http-proxy-middleware')
 
 module.exports = function (app) {
