@@ -1,3 +1,5 @@
+//This page is currently not used. However it can be imported if the user decides to use a local user registration instead of google login
+
 import React from 'react';
 import axios from 'axios';
 import FadeTransition from "../helpers/fadeTransition";
